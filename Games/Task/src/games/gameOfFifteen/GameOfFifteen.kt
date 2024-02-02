@@ -19,7 +19,7 @@ class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
     }
 
     private fun GameBoard<Int?>.initializer(initialList: List<Int>) {
-        val elements: MutableList<Int?> =initialList.toMutableList()
+        val elements: MutableList<Int?> = initialList.toMutableList()
         elements.add(null)
         for (i in 1..width) {
             for (j in 1..width) {
@@ -33,7 +33,8 @@ class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
     }
 
     override fun hasWon(): Boolean {
-        board.getAllCells()
+        var number = 1
+        return board.all { element -> element == null || element == number++ }
     }
 
     override fun processMove(direction: Direction) {
