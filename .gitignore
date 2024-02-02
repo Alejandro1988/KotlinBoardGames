@@ -113,3 +113,6 @@ outTmp/
 /kotlin-native/dist
 kotlin-ide/
 .kotlin/
+course-info.yaml
+task-info-yaml
+vcs.xml
