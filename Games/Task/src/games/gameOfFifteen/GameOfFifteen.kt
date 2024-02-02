@@ -10,19 +10,30 @@ import games.game.Game
  * When you finish, you can play the game by executing 'PlayGameOfFifteen'.
  */
 fun newGameOfFifteen(initializer: GameOfFifteenInitializer = RandomGameInitializer()): Game = GameOfFifteen(initializer)
+
 class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
-    //el tablero del juego es 4x4 (15 piezas y un espacio vacio)
-    private val board: GameBoard<Int?> = createGameBoard(4)
+    private val board: GameBoard<Int?> = createGameBoard(4)//el tablero del juego es 4x4 (15 piezas y un espacio vacio)
+
     override fun initialize() {
-        TODO("Not yet implemented")
+        board.initializer(initializer.initialPermutation)
+    }
+
+    private fun GameBoard<Int?>.initializer(initialList: List<Int>) {
+        val elements: MutableList<Int?> =initialList.toMutableList()
+        elements.add(null)
+        for (i in 1..width) {
+            for (j in 1..width) {
+                this[this.getCell(i, j)] = elements.removeFirst()
+            }
+        }
     }
 
     override fun canMove(): Boolean {
-        TODO("Not yet implemented")
+        return true
     }
 
     override fun hasWon(): Boolean {
-        TODO("Not yet implemented")
+        board.getAllCells()
     }
 
     override fun processMove(direction: Direction) {
