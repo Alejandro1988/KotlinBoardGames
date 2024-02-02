@@ -1,7 +1,93 @@
-<<<<<<< HEAD
-.DS_Store
-=======
+##############################
+## Java
+##############################
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+##############################
+## Maven
+##############################
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## Gradle
+##############################
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+##############################
+## Eclipse
+##############################
+.settings/
+
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+##############################
+## NetBeans
+##############################
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.code-workspace
+
+##############################
+## OS X
+##############################
+.DS_Store
+
+##############################
+## Miscellaneous
+##############################
+*.log
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -11,15 +97,9 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-*.iws
-*.iml
-*.ipr
 
 ### Eclipse ###
 .apt_generated
-.classpath
-.factorypath
-.project
 .settings
 .springBeans
 .sts4-cache
@@ -30,16 +110,9 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
 */build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
 
 .idea/shelf
 /confluence/target
@@ -52,7 +125,6 @@ build/
 /ideaSDK
 /clionSDK
 /android-studio/sdk
-out/
 */out/
 /tmp
 /intellij
@@ -85,27 +157,10 @@ workspace.xml
 .idea/libraries-with-intellij-classes.xml
 .idea/misc.xml
 .idea/protoeditor.xml.idea/artifacts
-.idea/remote-targets.xml
-.idea/libraries/Gradle*.xml
-.idea/libraries/Maven*.xml
-.idea/modules
-.idea/runConfigurations/JPS_*.xml
-.idea/runConfigurations/_JPS_*.xml
-.idea/runConfigurations/PILL_*.xml
-.idea/runConfigurations/_FP_*.xml
-.idea/runConfigurations/_MT_*.xml
-.idea/libraries
-.idea/gradle.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/.name
-.idea/csv-plugin.xml
-.idea/libraries-with-intellij-classes.xml
-.idea/misc.xml
 .idea/protoeditor.xml
 node_modules/
 .rpt2_cache/
 libraries/tools/kotlin-test-js-runner/lib/
-local.properties
 buildSrcTmp/
 distTmp/
 outTmp/
