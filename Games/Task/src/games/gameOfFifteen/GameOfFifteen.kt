@@ -4,6 +4,7 @@ import board.Direction
 import board.GameBoard
 import board.createGameBoard
 import games.game.Game
+import games.game2048.moveValues
 
 /*
  * Implement the Game of Fifteen (https://en.wikipedia.org/wiki/15_puzzle).
@@ -38,12 +39,16 @@ class GameOfFifteen(private val initializer: GameOfFifteenInitializer) : Game {
     }
 
     override fun processMove(direction: Direction) {
-        TODO("Not yet implemented")
+        board.moveValues(direction)
     }
 
-    override fun get(i: Int, j: Int): Int? {
-        TODO("Not yet implemented")
+    override fun get(i: Int, j: Int): Int? = board.run { get(getCell(i, j)) }
+
+    private fun GameBoard<Int?>.moveValues(direction: Direction): Boolean {
+        val nullCell = board.find { cell -> cell == null }
+        val cellToMove = nullCell?.getNeighbour(direction.reversed()) ?: return false
+        board[nullCell] = board[cellToMove]
+        board[cellToMove] = null
+        return true
     }
-
-
 }

@@ -19,9 +19,9 @@ class RandomGameInitializer : GameOfFifteenInitializer {
      * by swapping two numbers).
      */
     override val initialPermutation by lazy {
-        val completeList = (1 .. 15).toList()
+        var completeList = (1 .. 15).toList()
         do {
-            completeList.shuffled(Random)
+           completeList = completeList.shuffled(Random)
         } while (isEven(completeList))
 
         completeList
